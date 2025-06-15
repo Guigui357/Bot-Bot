@@ -21,7 +21,6 @@ jobs:
       - name: Unzip Bot_Bot.zip
         run: |
           unzip Bot_Bot.zip
-          cd Bot_Bot
 
       - name: Install build tools
         run: |
