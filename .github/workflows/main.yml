@@ -3,8 +3,8 @@ name: Build and Publish to PyPI
 on:
   push:
     tags:
-      - 'v*'   # Só executa quando você criar uma tag começando com "v" (ex: v1.0.0)
-
+      - 'v*' # Só executa quando você criar uma tag começando com "v" (ex: v1.0.0)
+  workflow_dispatch:
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
