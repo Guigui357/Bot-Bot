@@ -34,5 +34,5 @@ jobs:
           TWINE_USERNAME: __token__
           TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
         run: |
-          cd Bot_Bot
-          twine upload dist/*
+          cd /home/runner/work
+          twine upload Bot_Minecraft-0.2.0-py3-none-any.whl Bot_Minecraft-0.2.0.tar.gz
