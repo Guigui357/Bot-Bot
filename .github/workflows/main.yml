@@ -25,6 +25,7 @@ jobs:
       
       - name: Build the package
         run: |
+          cd Bot_Bot
           python -m build
 
       - name: Upload to PyPI
