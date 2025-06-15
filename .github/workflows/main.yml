@@ -11,10 +11,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Unzip project
-        run: |
-          unzip Bot_Bot.zip -d Bot_Bot
-
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
@@ -24,9 +20,11 @@ jobs:
         run: |
           python -m pip install --upgrade pip setuptools wheel build twine
 
+      - name: Unzip project
+        run: unzip Bot_Bot.zip -d $GITHUB_WORKSPACE
+      
       - name: Build the package
         run: |
-          cd Bot_Bot
           python -m build
 
       - name: Upload to PyPI
