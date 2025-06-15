@@ -18,6 +18,11 @@ jobs:
         with:
           python-version: '3.x'
 
+      - name: Unzip Bot_Bot.zip
+        run: |
+          unzip Bot_Bot.zip
+          cd Bot_Bot
+
       - name: Install build tools
         run: |
           python -m pip install --upgrade pip
