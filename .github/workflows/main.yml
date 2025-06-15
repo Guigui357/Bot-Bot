@@ -20,15 +20,6 @@ jobs:
         run: |
           python -m pip install --upgrade pip setuptools wheel build twine
 
-      - name: Unzip project
-        run: unzip Bot_Bot\ 2.zip -d $GITHUB_WORKSPACE
-      
-      - name: Build the package
-        run: |
-          cd Bot_Bot
-          rm dist/*
-          python -m build
-
       - name: Upload to PyPI
         env:
           TWINE_USERNAME: __token__
