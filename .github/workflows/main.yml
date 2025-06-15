@@ -21,7 +21,7 @@ jobs:
           python -m pip install --upgrade pip setuptools wheel build twine
 
       - name: Unzip project
-        run: unzip Bot_Bot.zip -d $GITHUB_WORKSPACE
+        run: unzip Bot_Bot\ 2.zip -d $GITHUB_WORKSPACE
       
       - name: Build the package
         run: |
